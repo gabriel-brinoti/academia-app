@@ -1,0 +1,4 @@
+import React from 'react';
+import { Pressable, Text, View, StyleSheet } from 'react-native';
+export default function CardAluno({ aluno, aoPressionar }) { return <Pressable onPress={aoPressionar} style={s.card}><View style={s.avatar}><Text style={s.inicial}>{aluno.nome.charAt(0)}</Text></View><View style={{flex:1}}><Text style={s.nome}>{aluno.nome}</Text><Text style={s.meta}>{`${aluno.idade} anos · ${aluno.modalidade}`}</Text></View><Text style={s.seta}>›</Text></Pressable>; }
+const s=StyleSheet.create({card:{flexDirection:'row',alignItems:'center',padding:14,marginBottom:10,backgroundColor:'#FFF',borderRadius:16,borderWidth:1,borderColor:'#E5ECE8'},avatar:{width:45,height:45,borderRadius:23,backgroundColor:'#DDEFE5',alignItems:'center',justifyContent:'center',marginRight:12},inicial:{color:'#1E7654',fontWeight:'800',fontSize:20},nome:{fontSize:16,fontWeight:'700',color:'#173A2F'},meta:{color:'#64776B',marginTop:3},seta:{fontSize:27,color:'#1E7654'}});
